@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <link rel="stylesheet/less" href="css/bootstrap.less">
+    <script src="js3rdparty/less-1.2.1.min.js"></script>
+    <script src='js3rdparty/jquery-1.7.1.min.js'></script>
+    <script src='js3rdparty/bootstrap-tabs.js'></script>
+    <title>Welcome to Requester</title>
+  </head>
+  <body>
+    <div class="active" id="shop">
+      <div class="span16">
+        <h2>All current requests</h2>
+
+        <input type="submit" class="btn primary" value="Create New item" data-bind="click: createItem"/>
+
+        <br/> <br/>
+
+        <table class="bordered-table">
+          <thead>
+            <tr>
+              <th>Request</th>
+              <th>Status</th>
+              <th>Author</th>
+              <th>Path</th>
+              <th>Save</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody data-bind="foreach: requests">
+            <tr>
+              <td> <input data-bind="value: request, change: request"/> </td>
+              <td> <select data-bind="options: statusCodes, value: status"></select> </td>
+              <td> <select data-bind="options: authors, value: author"></select> </td>
+              <td> <input data-bind="value: path"/> </td>
+              <td> <input type="submit" class="btn primary" value="Save" data-bind="click: $root.saveItem"/> </td>
+              <td> <input type="submit" class="btn primary" value="Remove" data-bind="click: $root.removeItem"/> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+
+  <script src='js3rdparty/sockjs-min-0.3.4.js'></script>
+  <script src='js3rdparty/knockout-2.0.0.js'></script>
+  <script src="js3rdparty/knockout-mapping-plugin-2.4.1.js"></script>
+  <script src='js/vertxbus.js'></script>
+  <script src='js/client_app.js'></script>
+</html>
