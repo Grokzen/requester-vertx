@@ -1,3 +1,4 @@
+===============
 requester-vertx
 ===============
 
@@ -5,13 +6,18 @@ Webbapp that can make simple requests and some admin functionality. Created with
 
 
 
+System dependencies
+===================
+
+ #. vert.x >= 2.1M1
+ #. MongoDB
+
+
+
 How to run
 ==========
 
-#. Install vert.x >= 2.0 beta 2
-#. Install MongoDB to enable data persistance
-#. cd to requester-vertx folder
-#. Run command: vertx run app.py
+#. Run: vertx run app.py
 #. Open webbbrowser and navigate to http://localhost:8080
 
 
