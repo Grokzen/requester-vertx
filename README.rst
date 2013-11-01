@@ -9,8 +9,8 @@ Webbapp that can make simple requests and some admin functionality. Created with
 System dependencies
 ===================
 
- #. vert.x >= 2.1M1
- #. MongoDB
+#. vert.x >= 2.1M1
+#. MongoDB
 
 
 
